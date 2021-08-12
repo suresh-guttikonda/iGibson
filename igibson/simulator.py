@@ -1443,7 +1443,7 @@ class Simulator:
         """
         avg_category_spec = get_ig_avg_category_specs()
         for k, v in avg_category_spec.items():
-            if v["enable_ag"]:
+            if "enable_ag" in v and v["enable_ag"]:
                 self.assist_grasp_category_allow_list.add(k)
 
     def can_assisted_grasp(self, body_id, c_link):
